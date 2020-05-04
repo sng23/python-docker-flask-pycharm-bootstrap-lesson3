@@ -12,17 +12,17 @@ app.config['MYSQL_DATABASE_HOST'] = 'db'
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
 app.config['MYSQL_DATABASE_PORT'] = 3306
-app.config['MYSQL_DATABASE_DB'] = 'citiesData'
+app.config['MYSQL_DATABASE_DB'] = 'hw'
 mysql.init_app(app)
 
 
 @app.route('/', methods=['GET'])
 def index():
-    user = {'username': 'Cities Project'}
+    user = {'username': 'Height and Weigh Project'}
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblCitiesImport')
+    cursor.execute('SELECT * FROM tblHwImport')
     result = cursor.fetchall()
-    return render_template('index.html', title='Home', user=user, cities=result)
+    return render_template('index.html', title='Home', user=user, hw=result)
 
 
 @app.route('/view/<int:city_id>', methods=['GET'])
@@ -53,6 +53,7 @@ def form_update_post(city_id):
     mysql.get_db().commit()
     return redirect("/", code=302)
 
+
 @app.route('/cities/new', methods=['GET'])
 def form_insert_get():
     return render_template('new.html', title='New City Form')
@@ -68,6 +69,7 @@ def form_insert_post():
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
+
 
 @app.route('/delete/<int:city_id>', methods=['POST'])
 def form_delete_post(city_id):
