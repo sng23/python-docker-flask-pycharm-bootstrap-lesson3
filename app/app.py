@@ -56,14 +56,12 @@ def form_insert_get():
     return render_template('new.html', title='New Height/Weight Form')
 
 
-@app.route('/cities/new', methods=['POST'])
+@app.route('/new', methods=['POST'])
 def form_insert_post():
     cursor = mysql.get_db().cursor()
-    inputData = (request.form.get('fldName'), request.form.get('fldLat'), request.form.get('fldLong'),
-                 request.form.get('fldCountry'), request.form.get('fldAbbreviation'),
-                 request.form.get('fldCapitalStatus'), request.form.get('fldPopulation'))
-    sql_insert_query = """INSERT INTO tblCitiesImport (fldName,fldLat,fldLong,fldCountry,fldAbbreviation,fldCapitalStatus,fldPopulation) VALUES (%s, %s,%s, %s,%s, %s,%s) """
-    cursor.execute(sql_insert_query, inputData)
+    input_data = (request.form.get('fldHeightInches'), request.form.get('fldWeightPounds'))
+    sql_insert_query = """INSERT INTO tblHwImport ( fldHeightInches, fldWeightPounds) VALUES ( %s, %s) """
+    cursor.execute(sql_insert_query, input_data)
     mysql.get_db().commit()
     return redirect("/", code=302)
 
