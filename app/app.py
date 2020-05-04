@@ -33,12 +33,12 @@ def record_view(hw_id):
     return render_template('view.html', title='View Form', hw=result[0])
 
 
-@app.route('/edit/<int:city_id>', methods=['GET'])
-def form_edit_get(city_id):
+@app.route('/edit/<int:hw_id>', methods=['GET'])
+def form_edit_get(hw_id):
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblCitiesImport WHERE id=%s', city_id)
+    cursor.execute('SELECT * FROM tblHwImport WHERE id=%s', hw_id)
     result = cursor.fetchall()
-    return render_template('edit.html', title='Edit Form', city=result[0])
+    return render_template('edit.html', title='Edit Form', hw=result[0])
 
 
 @app.route('/edit/<int:city_id>', methods=['POST'])
