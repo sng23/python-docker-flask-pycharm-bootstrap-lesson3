@@ -6,6 +6,7 @@
         <th scope="col">Index</th>
         <th scope="col">Height (Inches)</th>
         <th scope="col">Weight (Pounds)</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
         <td><a href="view/{{h.id}}">{{ h.id }}</a></td>
         <td>{{ h.fldHeightInches }}</td>
         <td>{{ h.fldWeightPounds }}</td>
+        <td><a href="delete/{{ h.id }}">Delete</a></td>
     </tr>
     {% endfor %}
     </tbody>
