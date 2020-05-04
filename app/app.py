@@ -51,9 +51,9 @@ def form_update_post(hw_id):
     return redirect("/", code=302)
 
 
-@app.route('/cities/new', methods=['GET'])
+@app.route('/new', methods=['GET'])
 def form_insert_get():
-    return render_template('new.html', title='New City Form')
+    return render_template('new.html', title='New Height/Weight Form')
 
 
 @app.route('/cities/new', methods=['POST'])
