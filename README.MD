@@ -1,22 +1,24 @@
-# Project Description - Lesson 3
+# Miniproject 3, part 1
+
+## Project Description
 This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman
+    
+## Authors
+Arif Khan, Jeffrey Frelish, Scott Grodberg
 
-## Assignment 1 Readings
-* [What is an HTTP API?](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
-* [What is JSON?](https://www.w3schools.com/whatis/whatis_json.asp)
-* [What is SQL?](http://www.sqlcourse.com/intro.html)
-* [What is MySQL](https://www.hostinger.com/tutorials/what-is-mysql)
-* [What is Docker Compose?](https://www.tutorialspoint.com/docker/docker_compose.htm)
-* [What is Flask?](https://en.wikipedia.org/wiki/Flask_(web_framework))
+## Changelog
+* 3/4/20 SG Clone repo, checkout lesson3, initial commit
+* 3/8/20 SG Set up docker containers
+* 3/8/20 AK Data import
+* 3/8/20 SG Index page
+* 3/8/20 SG View page
+* 3/9/20 JF Edit page
+* 3/9/20 JF Edit page save
+* 3/9/20 JF New page
+* 3/9/20 JF New page save
+* 3/9/20 AK Delete action
+* 3/10/20 AK APIs 
+* 3/10/20 AK Link to new form
 
-## Assignment 2 Readings
-* [Getting started and Reference for Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-* [Tutorials this is based on:](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates)
-* [Documentation for Flask Templates](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/)
-
-# Useful Links
-* [Flask Homepage and Documentation](https://flask.palletsprojects.com/en/1.1.x/)
-* [JSON Spec Reference](https://www.json.org/json-en.html)
-* [SimpleJSON Reference](https://simplejson.readthedocs.io/en/latest/)
-* [W3 Schools SQL Tutorial and Reference](https://www.w3schools.com/sql/)
+Some commits appear from SG, since they were rebased
     
